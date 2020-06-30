@@ -16,7 +16,7 @@ import { Container, Content, Background } from './styles';
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: any): Promise<void> => {
+  const handleSubmit = useCallback(async (data: unknown): Promise<void> => {
     try {
       formRef.current?.setErrors({});
       const schema = Yup.object().shape({
