@@ -57,7 +57,8 @@ export const AuthProvider: React.FC = ({ children }) => {
 export function useAuth(): AuthContextData {
   const context = useContext(AuthContext);
 
-  if (!context) throw new Error();
+  if (!context)
+    throw new Error("Error using useAuth because AuthContext don't instanced");
 
   return context;
 }
